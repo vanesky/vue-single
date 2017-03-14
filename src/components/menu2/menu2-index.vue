@@ -5,10 +5,14 @@
 </template>
 
 <script>
+  //校验
   export default {
     name: '',
     data () {
       return {
+
+        checked:'',
+
         msg: 'Welcome to Your Vue.js this is menu2',
 
         customerName:'12346',

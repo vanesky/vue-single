@@ -3,16 +3,18 @@
     {{msg}}
 
     <div style="width:300px;height:300px;background-color: #1fb394;" v-touch:tap="{method:demo,param:'这是文字'}">你就是一个傻子</div>
+
   </div>
 </template>
 
 <script>
+
   export default {
     name: 'one-a',
     data () {
       return {
-        msg: 'Welcome to Your Vue.js this is menu1',
 
+        msg: 'Welcome to Your Vue.js this is menu1',
       }
     },
 
@@ -24,7 +26,6 @@
 
     },
     computed:{
-
 
     }
   }
