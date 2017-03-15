@@ -6,6 +6,7 @@
     <prent-check v-model="model">
       <com-check v-for="item in list" :child="item"></com-check>
     </prent-check>
+
   </div>
 </template>
 
@@ -25,7 +26,6 @@
       age:11
     }
   ]
-
 
   export default {
     name: '',

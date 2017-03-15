@@ -11,11 +11,6 @@
 
       }
     },
-    data:function(){
-      return {
-
-      }
-    },
     props:['value'],
 
   }

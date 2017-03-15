@@ -57,24 +57,6 @@
 
     },
 
-    methods:{
-
-      updateSelVal:function(val){
-
-        if(this.checked){
-
-          this.$parent.arr.push(val)
-        }else{
-
-          this.$parent.arr.forEach(function(item,index,self){
-            if(item == val){
-              self.splice(index,1)
-            }
-          })
-        }
-      }
-
-    },
     data () {
       return {
 

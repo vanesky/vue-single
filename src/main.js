@@ -28,11 +28,13 @@ Vue.use(validate)
 import touch from 'js/touch'
 Vue.use(touch)
 
-//组件全局
-import allComponents from 'js/components'
+//组件全局化
+import allComponents from 'js/overall'
 Vue.use(allComponents)
 
-
+//全局组件
+import all from 'js/com-component'
+Vue.use(all)
 
 //页面
 import Login from './components/login.vue'
@@ -42,6 +44,7 @@ import Menu1 from 'components/menu1/menu1-index.vue'
 import Menu2 from 'components/menu2/menu2-index.vue'
 import Menu3 from 'components/menu3/menu3-index.vue'
 import Menu4 from 'components/menu4/menu4-index.vue'
+import Menu5 from 'components/menu5/menu5-index.vue'
 
 const router = new VueRouter({
   mode: 'history',
@@ -75,6 +78,10 @@ const router = new VueRouter({
         {
           path: 'menu4',
           component:Menu4
+        },
+        {
+          path: 'menu5',
+          component:Menu5
         }
       ]
     }
