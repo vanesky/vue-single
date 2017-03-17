@@ -24,31 +24,32 @@
         preFun:'',
 
         context:'',
-
-        setAlert:function(param){
-
-          this.display = true;
-
-          if(param.title){this.title = param.title}
-
-          if(param.callBack){this.preFun = param.callBack}
-
-          if(param.context){this.context = param.context}
-
-        },
-
-        clickFun:function(str){
-
-          if(str == 1 && this.preFun){
-
-            this.preFun(this.context)
-
-          }
-          this.display = false;
-        }
-
       }
+    },
 
+    methods:{
+
+      setAlert:function(param){
+
+        this.display = true;
+
+        if(param.title){this.title = param.title}
+
+        if(param.callBack){this.preFun = param.callBack}
+
+        if(param.context){this.context = param.context}
+
+      },
+
+      clickFun:function(str){
+
+        if(str == 1 && this.preFun){
+
+          this.preFun(this.context)
+
+        }
+        this.display = false;
+      }
     }
   }
 </script>

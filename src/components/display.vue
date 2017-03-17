@@ -1,6 +1,9 @@
 <template>
   <div class="add">
-    {{disVal}}
+    {{a}}
+
+    <span>这个是B的值</span>
+    {{b}}
   </div>
 </template>
 
@@ -17,8 +20,12 @@
     }),*/
     computed:{
 
-      disVal:function(){
-        return this.$store.getters.getMessage;
+      b:function(){
+        return this.$store.state.b.count;
+      },
+
+      a:function(){
+        return this.$store.state.a.count;
       }
 
     }

@@ -2,7 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import store from './js/store'
+import store from './store/store'
 
 //路由导入
 import VueRouter from 'vue-router'
@@ -36,6 +36,9 @@ Vue.use(allComponents)
 import all from 'js/com-component'
 Vue.use(all)
 
+import demo from './components/common/alert/demo.vue'
+Vue.component('demo',demo)
+
 //页面
 import Login from './components/login.vue'
 import Index from './components/index.vue'
@@ -45,6 +48,7 @@ import Menu2 from 'components/menu2/menu2-index.vue'
 import Menu3 from 'components/menu3/menu3-index.vue'
 import Menu4 from 'components/menu4/menu4-index.vue'
 import Menu5 from 'components/menu5/menu5-index.vue'
+import Menu6 from 'components/menu6/menu6-index.vue'
 
 const router = new VueRouter({
   mode: 'history',
@@ -82,6 +86,10 @@ const router = new VueRouter({
         {
           path: 'menu5',
           component:Menu5
+        },
+        {
+          path: 'menu6',
+          component:Menu6
         }
       ]
     }

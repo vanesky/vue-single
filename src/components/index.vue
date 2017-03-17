@@ -28,6 +28,9 @@
         <li class="nav-list" @click="navToggle('第五个','/index/menu5')" :class="{ 'nav-list-after' : toggleVal == '第五个'}">
           <span>第五个</span>
         </li>
+        <li class="nav-list" @click="navToggle('第六个','/index/menu6')" :class="{ 'nav-list-after' : toggleVal == '第六个'}">
+          <span>第六个</span>
+        </li>
       </ul>
     </section>
 
@@ -45,22 +48,20 @@
       </section>
     </section>
 
-
-    <!--<section id="com"></section>-->
+    <demo v-if="result"></demo>
 
   </section>
 </template>
 
 <script>
   import add from './add'
-  import display from './display.vue'
+
 
   export default {
     name: 'app',
 
     data :function() {
       return {
-
         toggleVal: '第一个',
       }
     },
@@ -70,7 +71,11 @@
     },
     computed: {
       result () {
-        return this.$store.state.count
+        return this.$store.state.b.show
+      },
+      backObj(){
+
+        return this.$store.state.b.obj
       }
     },
     methods: {
@@ -82,16 +87,7 @@
         this.$router.push(href);
 
       },
-      incrementClick () {
-        this.$store.commit('increment',10)
-      },
-      decrement () {
-        this.$store.commit('decrement')
-      },
-    },
-    components: {
-      add:add,
-      display:display,
+
     },
 
   }

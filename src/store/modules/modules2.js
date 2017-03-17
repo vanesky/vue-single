@@ -1,45 +1,46 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
 
-Vue.use(Vuex)
 
 // 创建一个对象来保存应用启动时的初始状态
 const state = {
   // 放置初始状态
-  count: 0
+  count: 0,
+
+  show:false,
+
+  obj:{}
 }
 
 // 创建一个对象存储一系列我们接下来要写的 mutation 函数
 const mutations = {
   // 放置我们的状态变更函数
-  increment (state, amount) {
+  m2 (state, amount){
     state.count = state.count + amount
   },
-  ADD (state, amount){
-    state.count = state.count + amount
+
+  dis(state,param){
+    state.show = true;
+    state.obj = param;
   }
 }
 const actions = {
-  ADD : function(store , param){
+  add2 : function(store , param){
     return new Promise(function(resolve, reject) {
-      store.commit('ADD',param)
+      store.commit('m2',param)
       resolve("ok");
     })
   },
 }
 
-//getter接受state为第一个参数
+//复用 getter接受state为第一个参数
 const getters = {
-  getMessage:function(state){
+  /*getMessage:function(state){
     return state.count
-  }
+  }*/
 }
 
-// 整合初始状态和变更函数，我们就得到了我们所需的 store
-// 至此，这个 store 就可以连接到我们的应用中
-export default new Vuex.Store({
+export default{
   state,
   mutations,
   actions,
   getters
-})
+};
