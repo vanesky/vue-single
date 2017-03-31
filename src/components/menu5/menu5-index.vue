@@ -27,12 +27,12 @@
 
           title:'这是一个测试',
 
-          callBack:function(_this){
+          callBack:() => {
 
-            console.log(_this.kiss)
-          },
+            console.log(this.kiss)
 
-          context:this
+          }
+
         });
       },
 

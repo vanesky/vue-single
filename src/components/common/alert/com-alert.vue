@@ -23,7 +23,6 @@
 
         preFun:'',
 
-        context:'',
       }
     },
 
@@ -37,15 +36,13 @@
 
         if(param.callBack){this.preFun = param.callBack}
 
-        if(param.context){this.context = param.context}
-
       },
 
       clickFun:function(str){
 
         if(str == 1 && this.preFun){
 
-          this.preFun(this.context)
+          this.preFun()
 
         }
         this.display = false;
