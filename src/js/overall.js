@@ -1,6 +1,8 @@
 
 //全局化组件
 
+import load from '../components/common/load/two/com-load.vue'
+
 import radio from '../components/common/radio/com-radio.vue'
 
 import checkAll from '../components/common/check/check-all.vue'
@@ -15,6 +17,7 @@ export default function(Vue){
 
   let com = {
 
+    'com-load':load,
     'com-radio':radio,
 
     'com-check':check,

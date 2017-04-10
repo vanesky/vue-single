@@ -20,8 +20,8 @@
 
     methods:{
 
-      demo:function(str){
-        console.log(str)
+      demo:function(a){
+        console.log(this.msg)
       }
 
     },

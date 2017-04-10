@@ -2,9 +2,10 @@
   <div id="love" class="">
     <input type="button" value="点击alert" @click="alertFun">
 
-    <input type="button" value="点击我load" @click="this.$load">
+    <!--<input type="button" value="点击我load" @click="this.$load">-->
 
     <input type="button" value="点击我message" @click="messageFun">
+
 
   </div>
 </template>
@@ -16,6 +17,8 @@
     data () {
       return {
 
+        loadDisplay:false,
+
         kiss:123456789
       }
     },
@@ -23,13 +26,15 @@
 
       alertFun:function(){
 
+        let _this = this;
+
         this.$alert({
 
           title:'这是一个测试',
 
-          callBack:() => {
+          callBack:function(){
 
-            console.log(this.kiss)
+            console.log(_this.kiss)
 
           }
 
@@ -58,6 +63,6 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style scoped>
 
 </style>

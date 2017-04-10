@@ -21,13 +21,13 @@ let validateRule = {
 
 let v = function(Vue){
 
-  Vue.prototype.valid = function (context,validate) {
+  Vue.prototype.valid = function (validate) {
 
     let str = [];
 
     for(let i in validate.rules){
 
-      let value = context[i];
+      let value = this[i];
 
       let childObj = validate.rules[i];
 

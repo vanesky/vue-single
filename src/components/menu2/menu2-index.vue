@@ -15,7 +15,7 @@
 
         msg: 'Welcome to Your Vue.js this is menu2',
 
-        customerName:'12346',
+        customerName:'555',
 
         phone:18092828092,
 
@@ -41,7 +41,7 @@
 
       }
 
-      this.valid(this,validate);
+      this.valid(validate);
     },
 
   }

@@ -1,5 +1,5 @@
 
-import load from '../components/common/load/com-load.vue'
+//import load from '../components/common/load/com-load.vue'
 
 import message from '../components/common/message/com-message.vue'
 
@@ -7,7 +7,7 @@ import alert from '../components/common/alert/com-alert.vue'
 
 export default function(Vue){
 
-  Vue.prototype.$load = function(){
+  /*Vue.prototype.$load = function(){
 
     let attr=document.createAttribute("id");
 
@@ -28,7 +28,7 @@ export default function(Vue){
 
     }).$mount("#comLoad")
 
-  };
+  };*/
 
 
   Vue.prototype.$message = function(obj){

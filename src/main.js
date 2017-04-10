@@ -36,6 +36,7 @@ Vue.use(allComponents)
 import all from 'js/com-component'
 Vue.use(all)
 
+//状态管理版组件
 import demo from './components/common/alert/demo.vue'
 Vue.component('demo',demo)
 
